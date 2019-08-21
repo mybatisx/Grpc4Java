@@ -1,0 +1,16 @@
+syntax = "proto3";
+package cn.test.grpc;
+
+service StreamService {
+
+  rpc SimpleFun(RequestData) returns (ResponseData){}
+
+
+}
+message RequestData {
+  string text = 1;
+}
+
+message ResponseData {
+  string text = 1;
+}
