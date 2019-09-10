@@ -1,0 +1,29 @@
+syntax = "proto3";
+package cn.test.userservice.v1;
+
+import "google/api/annotations.proto";
+
+// stub选项
+//option java_package = "cn.test.userservice.v1";
+
+//option java_outer_classname = "UserServiceV15";
+
+option java_multiple_files = true;
+
+service UserService {
+
+  rpc SimpleFun(RequestData) returns (ResponseData){
+               option (google.api.http) = {
+                                             get: "/v1/test/{name}"
+                                          };
+   }
+
+
+}
+message RequestData {
+  string name = 1;
+}
+
+message ResponseData {
+  string text = 1;
+}

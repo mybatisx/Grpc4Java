@@ -19,14 +19,14 @@ public final class Stream {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string text = 1;</code>
+     * <code>string name = 1;</code>
      */
-    java.lang.String getText();
+    java.lang.String getName();
     /**
-     * <code>string text = 1;</code>
+     * <code>string name = 1;</code>
      */
     com.google.protobuf.ByteString
-        getTextBytes();
+        getNameBytes();
   }
   /**
    * Protobuf type {@code cn.test.grpc.RequestData}
@@ -41,7 +41,7 @@ public final class Stream {
       super(builder);
     }
     private RequestData() {
-      text_ = "";
+      name_ = "";
     }
 
     @java.lang.Override
@@ -77,7 +77,7 @@ public final class Stream {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              text_ = s;
+              name_ = s;
               break;
             }
             default: {
@@ -112,34 +112,34 @@ public final class Stream {
               cn.test.grpc.Stream.RequestData.class, cn.test.grpc.Stream.RequestData.Builder.class);
     }
 
-    public static final int TEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object text_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
-     * <code>string text = 1;</code>
+     * <code>string name = 1;</code>
      */
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        text_ = s;
+        name_ = s;
         return s;
       }
     }
     /**
-     * <code>string text = 1;</code>
+     * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        text_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -160,8 +160,8 @@ public final class Stream {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTextBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       unknownFields.writeTo(output);
     }
@@ -172,8 +172,8 @@ public final class Stream {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTextBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -190,8 +190,8 @@ public final class Stream {
       }
       cn.test.grpc.Stream.RequestData other = (cn.test.grpc.Stream.RequestData) obj;
 
-      if (!getText()
-          .equals(other.getText())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -203,8 +203,8 @@ public final class Stream {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -338,7 +338,7 @@ public final class Stream {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        text_ = "";
+        name_ = "";
 
         return this;
       }
@@ -366,7 +366,7 @@ public final class Stream {
       @java.lang.Override
       public cn.test.grpc.Stream.RequestData buildPartial() {
         cn.test.grpc.Stream.RequestData result = new cn.test.grpc.Stream.RequestData(this);
-        result.text_ = text_;
+        result.name_ = name_;
         onBuilt();
         return result;
       }
@@ -415,8 +415,8 @@ public final class Stream {
 
       public Builder mergeFrom(cn.test.grpc.Stream.RequestData other) {
         if (other == cn.test.grpc.Stream.RequestData.getDefaultInstance()) return this;
-        if (!other.getText().isEmpty()) {
-          text_ = other.text_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -448,71 +448,71 @@ public final class Stream {
         return this;
       }
 
-      private java.lang.Object text_ = "";
+      private java.lang.Object name_ = "";
       /**
-       * <code>string text = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          text_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          text_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setText(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        text_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder clearText() {
+      public Builder clearName() {
         
-        text_ = getDefaultInstance().getText();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>string text = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setTextBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        text_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -1143,28 +1143,36 @@ public final class Stream {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014stream.proto\022\014cn.test.grpc\"\033\n\013RequestD" +
-      "ata\022\014\n\004text\030\001 \001(\t\"\034\n\014ResponseData\022\014\n\004tex" +
-      "t\030\001 \001(\t2U\n\rStreamService\022D\n\tSimpleFun\022\031." +
-      "cn.test.grpc.RequestData\032\032.cn.test.grpc." +
-      "ResponseData\"\000b\006proto3"
+      "\n\014stream.proto\022\014cn.test.grpc\032\034google/api" +
+      "/annotations.proto\"\033\n\013RequestData\022\014\n\004nam" +
+      "e\030\001 \001(\t\"\034\n\014ResponseData\022\014\n\004text\030\001 \001(\t2l\n" +
+      "\rStreamService\022[\n\tSimpleFun\022\031.cn.test.gr" +
+      "pc.RequestData\032\032.cn.test.grpc.ResponseDa" +
+      "ta\"\027\202\323\344\223\002\021\022\017/v1/test/{name}b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_cn_test_grpc_RequestData_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_cn_test_grpc_RequestData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cn_test_grpc_RequestData_descriptor,
-        new java.lang.String[] { "Text", });
+        new java.lang.String[] { "Name", });
     internal_static_cn_test_grpc_ResponseData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cn_test_grpc_ResponseData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cn_test_grpc_ResponseData_descriptor,
         new java.lang.String[] { "Text", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
